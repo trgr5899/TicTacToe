@@ -1,0 +1,77 @@
+  |   |
+--|---|--
+  |   |
+--|---|--
+  |   |
+enter a value from 1-9. like a numpad, 1 is top left, 9 is bottom right
+1
+Enter X or O: X
+ X |   |
+--|---|--
+  |   |
+--|---|--
+  |   |
+enter a value from 1-9. like a numpad, 1 is top left, 9 is bottom right
+2
+Enter X or O: O
+ X |  O |
+--|---|--
+  |   |
+--|---|--
+  |   |
+enter a value from 1-9. like a numpad, 1 is top left, 9 is bottom right
+3
+Enter X or O: O
+ X |  O |  O
+--|---|--
+  |   |
+--|---|--
+  |   |
+enter a value from 1-9. like a numpad, 1 is top left, 9 is bottom right
+4
+Enter X or O: X
+ X |  O |  O
+--|---|--
+ X |   |
+--|---|--
+  |   |
+enter a value from 1-9. like a numpad, 1 is top left, 9 is bottom right
+5
+Enter X or O: O
+ X |  O |  O
+--|---|--
+ X |  O |
+--|---|--
+  |   |
+enter a value from 1-9. like a numpad, 1 is top left, 9 is bottom right
+6
+Enter X or O: X
+ X |  O |  O
+--|---|--
+ X |  O |  X
+--|---|--
+  |   |
+enter a value from 1-9. like a numpad, 1 is top left, 9 is bottom right
+7
+Enter X or O: X
+ X |  O |  O
+--|---|--
+ X |  O |  X
+--|---|--
+ X |   |
+enter a value from 1-9. like a numpad, 1 is top left, 9 is bottom right
+8
+Enter X or O: O
+ X |  O |  O
+--|---|--
+ X |  O |  X
+--|---|--
+ X |  O |
+enter a value from 1-9. like a numpad, 1 is top left, 9 is bottom right
+9
+Enter X or O: X
+ X |  O |  O
+--|---|--
+ X |  O |  X
+--|---|--
+ X |  O |  X
