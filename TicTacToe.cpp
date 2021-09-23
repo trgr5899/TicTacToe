@@ -3,28 +3,42 @@
 #include <string>
 //Tic Tac Toe by Trevor Green and Umar Haroon
 //Trevor is person 1 and Umar is person 2
-std::vector<std::vector<std::string>> CreateBoard ()
+std::vector<std::vector<std::string> > CreateBoard ()
 {
-   return std::vector<std::vector<std::string>> (3, std::vector<std::string>(3, "n"));
+
+   return std::vector<std::vector<std::string> > (3, std::vector<std::string>(3, ""));
 }
-std::ostream& operator<<(std::ostream& os, const std::vector<std::vector<std::string>>& board)
-{
-    os<<"---Tic Tac Toe board---"<<std::endl;
-    os<<"-----------------------"<<std::endl;
-    for(unsigned int i=0;i<board.size();i++)
-    {
-      for(unsigned int j=0;j<board.at(0).size();j++)
-      {
-        os << board.at(i).at(j) <<" ";
+
+void GetPlayerChoice() {
+  int input;
+  std::cout << "enter a value from 1-9. like a numpad, 1 is top left, 9 is bottom right" << std::endl;
+  std::cin >> input;
+}
+
+void DisplayBoard(std::vector<std::vector<std::string> > *vec) {
+  
+  int row_count = 0;
+  for (std::vector<std::string> row: *vec) {
+    int col_count = 0;
+    for (std::string col: row) {
+      std::cout << " " << col;
+      if (col_count < 2) {
+        std::cout << " | "; 
+        col_count++;
       }
-      os<<std::endl;
     }
-    return os;
+    std::cout << std::endl;
+    if (row_count < 2) {
+      std::cout << "--|---|-- " << std::endl;
+      row_count ++;
+    }
+  }
 }
 
 int main()
 {
-  std::vector<std::vector<std::string>> new_board=CreateBoard();
-  new_board[1][1]="X";
-  std::cout<<new_board<<std::endl;
+  std::vector<std::vector <std::string> > new_board=CreateBoard();
+  // DisplayBoard(new_board);
+new_board[0][2] = "X";
+DisplayBoard(&new_board);
 }
