@@ -3,16 +3,20 @@
 #include <string>
 //Tic Tac Toe by Trevor Green and Umar Haroon
 //Trevor is person 1 and Umar is person 2
+
 std::vector<std::vector<std::string> > CreateBoard ()
 {
 
    return std::vector<std::vector<std::string> > (3, std::vector<std::string>(3, ""));
 }
-
-void GetPlayerChoice() {
+void GetPlayerChoice(std::vector<std::vector<std::string> > &board) {
   int input;
   std::cout << "enter a value from 1-9. like a numpad, 1 is top left, 9 is bottom right" << std::endl;
   std::cin >> input;
+  std::string value;
+  std::cout << "Enter X or O: ";
+  std::cin >> value;
+  PlaceMarker(board, input, value);
 }
 
 void PlaceMarker(int location,std::string marker,std::vector<std::vector<std::string> > &board)
@@ -82,6 +86,10 @@ int main()
 {
   std::vector<std::vector <std::string> > new_board=CreateBoard();
   // DisplayBoard(new_board);
-new_board[0][2] = "X";
-DisplayBoard(&new_board);
+
+  DisplayBoard(&new_board);
+  for (int i = 0; i < 9; i++) {
+  GetPlayerChoice(new_board);
+  DisplayBoard(&new_board);
+  }
 }
