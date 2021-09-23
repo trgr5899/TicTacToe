@@ -15,15 +15,58 @@ void GetPlayerChoice() {
   std::cin >> input;
 }
 
+void PlaceMarker(int location,std::string marker,std::vector<std::vector<std::string> > &board)
+{
+  switch (location)
+    {
+    case 1:
+      board[0][0] = marker;
+      break;
+
+    case 2:
+      board[0][1] = marker;
+      break;
+    case 3:
+      board[0][2] = marker;
+      break;
+
+    case 4:
+      board[1][0] = marker;
+      break;
+
+    case 5:
+      board[1][1] = marker;
+      break;
+
+    case 6:
+      board[1][2] = marker;
+      break;
+
+    case 7:
+      board[2][0] = marker;
+      break;
+
+    case 8:
+      board[2][1] = marker;
+      break;
+    case 9:
+      board[2][2] = marker;
+      break;
+
+    default:
+      break;
+    }
+}
+
 void DisplayBoard(std::vector<std::vector<std::string> > *vec) {
-  
+
   int row_count = 0;
   for (std::vector<std::string> row: *vec) {
     int col_count = 0;
     for (std::string col: row) {
       std::cout << " " << col;
       if (col_count < 2) {
-        std::cout << " | "; 
+        std::cout << " | ";
         col_count++;
       }
     }
